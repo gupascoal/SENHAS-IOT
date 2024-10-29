@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Cadastro e Login com Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Formulário de Login -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Usuário" required>
+      <input type="password" id="login-password" placeholder="Senha" required>
+      <button onclick="login()">Entrar</button>
+      <p>Ainda não tem conta? <a href="#" onclick="showRegister()">Cadastre-se aqui</a></p>
+      <p id="login-error" class="error-message"></p>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div id="register-form" style="display: none;">
+      <h2>Cadastro</h2>
+      <input type="text" id="register-username" placeholder="Usuário" required>
+      <input type="password" id="register-password" placeholder="Senha" required>
+      <input type="password" id="register-password-confirm" placeholder="Confirme a senha" required>
+      <button onclick="register()">Cadastrar</button>
+      <p>Já tem conta? <a href="#" onclick="showLogin()">Voltar ao login</a></p>
+      <p id="register-error" class="error-message"></p>
+    </div>
+
+    <!-- Seção do Gerador de Senhas (oculto inicialmente) -->
+    <div id="password-generator" style="display: none;">
+      <h3>Gerar Senha Forte</h3>
+      <button onclick="generatePassword()">Gerar Senha</button>
+      <p id="generated-password"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
