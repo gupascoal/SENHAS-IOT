@@ -1,54 +1,101 @@
+/* Reset de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #e0f7fa; /* Cor de fundo suave */
 }
 
 .container {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
   text-align: center;
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
 }
 
-h2, h3 {
+h2 {
+  color: #00796b; /* Verde-escuro */
+  font-size: 1.5em;
   margin-bottom: 15px;
 }
 
-input {
+h3 {
+  color: #00695c; /* Verde mais suave */
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 12px;
+  margin: 8px 0;
   font-size: 16px;
+  border: 1px solid #b2dfdb; /* Verde claro */
+  border-radius: 5px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #00796b; /* Verde */
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #004d40; /* Verde escuro */
 }
 
 .error-message {
-  color: red;
+  color: #d32f2f; /* Vermelho */
   font-size: 14px;
+  margin-top: 5px;
   display: none;
+}
+
+p {
+  margin: 10px 0;
+  color: #757575; /* Cinza para texto */
+  font-size: 0.9em;
+}
+
+a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #generated-password {
   font-weight: bold;
   color: #333;
   margin-top: 10px;
+}
+
+#password-generator button {
+  width: auto;
+  padding: 8px 15px;
+  background-color: #0288d1; /* Azul */
+}
+
+#password-generator button:hover {
+  background-color: #0277bd; /* Azul mais escuro */
 }
