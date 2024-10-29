@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); /* Cor de fundo suave */
+  background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg") no-repeat; /* Cor de fundo suave */
 }
 
 .container {
