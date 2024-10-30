@@ -1,4 +1,5 @@
-/* Reset de CSS */
+css
+Copiar código
 * {
   margin: 0;
   padding: 0;
@@ -10,94 +11,79 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg") no-repeat; /* Cor de fundo suave */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00bcd4, #4caf50); /* Fundo com gradiente */
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.7); /* Branco com opacidade de 70% */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Sombra suave */
-  backdrop-filter: blur(2px); /* Efeito de desfoque */
-  -webkit-backdrop-filter: blur(5px); /* Suporte para Safari */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
   text-align: center;
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
 }
 
-h2 {
-  color: #00796b; /* Verde-escuro */
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-h3 {
-  color: #00695c; /* Verde mais suave */
-  font-size: 1.2em;
+h2, h3 {
+  color: #00796b;
   margin-bottom: 15px;
 }
 
 input[type="text"], input[type="password"] {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
+  padding: 10px;
+  margin: 10px 0;
   font-size: 16px;
-  border: 1px solid #b2dfdb; /* Verde claro */
+  border: 1px solid #b2dfdb;
   border-radius: 5px;
 }
 
 button {
-  width: 100%;
-  padding: 12px;
+  padding: 12px 20px;
   margin-top: 10px;
-  background-color: #00796b; /* Verde */
+  background-color: #00796b;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #004d40; /* Verde escuro */
+  background-color: #004d40;
 }
 
 .error-message {
-  color: #d32f2f; /* Vermelho */
+  color: #d32f2f;
+  margin-top: 8px;
+}
+
+#password-list {
+  margin-top: 20px;
+}
+
+#generated-passwords {
+  list-style: none;
+}
+
+#generated-passwords li {
+  background: #e0f2f1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#generated-passwords li button {
+  background-color: #0288d1;
+  padding: 5px;
   font-size: 14px;
-  margin-top: 5px;
-  display: none;
 }
 
-p {
-  margin: 10px 0;
-  color: #757575; /* Cinza para texto */
-  font-size: 0.9em;
-}
-
-a {
-  color: #00796b;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-#generated-password {
-  font-weight: bold;
-  color: #333;
-  margin-top: 10px;
-}
-
-#password-generator button {
-  width: auto;
-  padding: 8px 15px;
-  background-color: #0288d1; /* Azul */
-}
-
-#password-generator button:hover {
-  background-color: #0277bd; /* Azul mais escuro */
+#generated-passwords li button:hover {
+  background-color: #0277bd;
 }
