@@ -1,3 +1,4 @@
+// Funções de Exibição de Formulários
 function showRegister() {
   document.getElementById('login-form').style.display = 'none';
   document.getElementById('register-form').style.display = 'block';
@@ -8,6 +9,7 @@ function showLogin() {
   document.getElementById('login-form').style.display = 'block';
 }
 
+// Função de Cadastro
 function register() {
   const username = document.getElementById('register-username').value;
   const password = document.getElementById('register-password').value;
@@ -34,6 +36,7 @@ function register() {
   showLogin();
 }
 
+// Funções de Login e Logout
 function login() {
   const username = document.getElementById('login-username').value;
   const password = document.getElementById('login-password').value;
@@ -43,6 +46,7 @@ function login() {
   if (users[username] && users[username] === password) {
     document.getElementById('login-form').style.display = 'none';
     document.getElementById('main-panel').style.display = 'block';
+    startIoTMonitoring();
   } else {
     loginError.textContent = 'Credenciais incorretas.';
     loginError.style.display = 'block';
@@ -54,6 +58,7 @@ function logout() {
   document.getElementById('login-form').style.display = 'block';
 }
 
+// Função de Geração e Cópia de Senhas
 function generatePassword() {
   const length = 12;
   const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
@@ -74,3 +79,7 @@ function copyPassword(password) {
     alert("Senha copiada!");
   });
 }
+
+// Funções de Monitoramento IoT e Relatório
+let operationTime = 0;
+let criticalAlerts
