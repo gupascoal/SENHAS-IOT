@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerador de Senhas - Aplicativo Completo</title>
+  <title>Painel IoT e Indústria 4.0</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Formulário de Login -->
   <div class="container" id="login-form">
     <h2>Login</h2>
     <input type="text" id="login-username" placeholder="Usuário" required>
@@ -16,6 +17,7 @@
     <p id="login-error" class="error-message"></p>
   </div>
 
+  <!-- Formulário de Cadastro -->
   <div class="container" id="register-form" style="display: none;">
     <h2>Cadastro</h2>
     <input type="text" id="register-username" placeholder="Usuário" required>
@@ -26,13 +28,31 @@
     <p id="register-error" class="error-message"></p>
   </div>
 
+  <!-- Painel Principal -->
   <div class="container" id="main-panel" style="display: none;">
-    <h2>Bem-vindo!</h2>
+    <h2>Bem-vindo ao Sistema IoT e Indústria 4.0</h2>
     <button onclick="generatePassword()">Gerar Senha Forte</button>
     <div id="password-list">
       <h3>Senhas Geradas:</h3>
       <ul id="generated-passwords"></ul>
     </div>
+
+    <!-- Painel de Monitoramento de Sensores IoT -->
+    <div id="iot-panel">
+      <h2>Monitoramento de Equipamentos IoT</h2>
+      <div id="sensor-data">
+        <p>Temperatura: <span id="temperature">--</span> °C</p>
+        <p>Umidade: <span id="humidity">--</span> %</p>
+        <p>Status do Equipamento: <span id="equipment-status">Normal</span></p>
+      </div>
+      <button onclick="generateReport()">Gerar Relatório de Desempenho</button>
+      <div id="report" style="display: none;">
+        <h3>Relatório de Desempenho do Equipamento</h3>
+        <p>Tempo em operação: <span id="operation-time">--</span> horas</p>
+        <p>Alertas críticos: <span id="critical-alerts">0</span></p>
+      </div>
+    </div>
+
     <button onclick="logout()">Sair</button>
   </div>
 
