@@ -1,9 +1,10 @@
- {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do corpo */
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -13,6 +14,7 @@ body {
   background: linear-gradient(135deg, #00bcd4, #4caf50);
 }
 
+/* Estilo do contêiner */
 .container {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 25px;
@@ -23,19 +25,28 @@ body {
   width: 100%;
 }
 
+/* Estilo dos títulos */
 h2, h3 {
   color: #00796b;
   margin-bottom: 15px;
 }
 
+/* Estilo dos campos de entrada */
 input[type="text"], input[type="password"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #b2dfdb;
   border-radius: 5px;
+  transition: border-color 0.3s;
 }
 
+/* Estilo dos campos de entrada ao focar */
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #00796b;
+}
+
+/* Estilo dos botões */
 button {
   padding: 10px 20px;
   margin-top: 10px;
@@ -44,17 +55,22 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efeito ao passar o mouse sobre os botões */
 button:hover {
   background-color: #004d40;
+  transform: translateY(-2px);
 }
 
+/* Estilo das mensagens de erro */
 .error-message {
   color: #d32f2f;
   margin-top: 8px;
 }
 
+/* Estilo da lista de senhas */
 #password-list ul {
   list-style: none;
   padding: 0;
@@ -69,6 +85,7 @@ button:hover {
   justify-content: space-between;
 }
 
+/* Estilo dos botões dentro da lista de senhas */
 #password-list li button {
   background-color: #0288d1;
   padding: 5px;
@@ -77,17 +94,26 @@ button:hover {
   border-radius: 5px;
 }
 
+/* Efeito ao passar o mouse sobre os botões da lista de senhas */
 #password-list li button:hover {
   background-color: #0277bd;
 }
 
+/* Estilo do painel IoT */
 #iot-panel {
   margin-top: 20px;
 }
 
+/* Estilo do relatório */
 #report {
   background: #f3e5f5;
   padding: 15px;
   border-radius: 8px;
   margin-top: 15px;
+  text-align: left;
+}
+
+/* Estilo da lista de senhas geradas */
+#generated-passwords {
+  text-align: left;
 }
