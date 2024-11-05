@@ -1,4 +1,3 @@
-// Funções de Exibição de Formulários
 function showRegister() {
   document.getElementById('login-form').style.display = 'none';
   document.getElementById('register-form').style.display = 'block';
@@ -82,4 +81,30 @@ function copyPassword(password) {
 
 // Funções de Monitoramento IoT e Relatório
 let operationTime = 0;
-let criticalAlerts
+let criticalAlerts = 0;
+
+function startIoTMonitoring() {
+  // Simulação de dados de sensores
+  setInterval(() => {
+    const temperature = (Math.random() * 100).toFixed(2); // Temperatura simulada
+    const humidity = (Math.random() * 100).toFixed(2); // Umidade simulada
+    const equipmentStatus = Math.random() > 0.8 ? 'Crítico' : 'Normal'; // Status aleatório
+
+    document.getElementById('temperature').textContent = temperature;
+    document.getElementById('humidity').textContent = humidity;
+    document.getElementById('equipment-status').textContent = equipmentStatus;
+
+    // Atualização do tempo de operação e alertas críticos
+    operationTime += 1; // Incrementa o tempo de operação
+    if (equipmentStatus === 'Crítico') {
+      criticalAlerts += 1; // Incrementa alertas críticos se o status for crítico
+    }
+  }, 5000); // Atualiza a cada 5 segundos
+}
+
+// Função para gerar e exibir o relatório de desempenho
+function generateReport() {
+  document.getElementById('operation-time').textContent = operationTime;
+  document.getElementById('critical-alerts').textContent = criticalAlerts;
+  document.getElementById('report').style.display = 'block';
+}
